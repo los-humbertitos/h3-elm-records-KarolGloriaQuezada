@@ -18,7 +18,6 @@ calc int1 int2 operator =
     operator int1 int2
 
 
-
 languages : List { name : String, releaseYear : Int, currentVersion : String }
 languages =
     [ { name = "elm", releaseYear = 2012, currentVersion = "0.19.1" }
@@ -31,8 +30,6 @@ languageNames :
     -> List String
 languageNames inData =
     List.map .name inData
-
-
 
 
 type alias User =
@@ -54,12 +51,11 @@ onlyStudents list =
         (\user ->
             if user.uType == "Student" then
                 user.name
+
             else
                 ""
         )
         list
-
-
 
 
 type alias Videogame =
