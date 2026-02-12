@@ -1,4 +1,5 @@
 module Helper exposing (..)
+
 import Html exposing (Html, div, h1, li, text, ul)
 
 
@@ -18,8 +19,6 @@ calc int1 int2 operator =
 
 
 
-
-
 languages : List { name : String, releaseYear : Int, currentVersion : String }
 languages =
     [ { name = "elm", releaseYear = 2012, currentVersion = "0.19.1" }
@@ -32,6 +31,7 @@ languageNames :
     -> List String
 languageNames inData =
     List.map .name inData
+
 
 
 
@@ -62,7 +62,6 @@ onlyStudents list =
 
 
 
-
 type alias Videogame =
     { title : String
     , releaseYear : Int
@@ -77,13 +76,13 @@ videogames =
     [ { title = "Control"
       , releaseYear = 2019
       , available = True
-      , downloads = 12
+      , downloads = 1234567
       , genres = [ "Action", "Shooter" ]
       }
-    , { title = "Ocarina of Time"
+    , { title = "Ocarina of time"
       , releaseYear = 1998
-      , available = True
-      , downloads = 13
+      , available = False
+      , downloads = 12345
       , genres = [ "Action", "Adventure" ]
       }
     ]
@@ -92,8 +91,6 @@ videogames =
 getVideogameGenres : List Videogame -> List (List String)
 getVideogameGenres list =
     List.map .genres list
-
-
 
 
 type alias Computer =
